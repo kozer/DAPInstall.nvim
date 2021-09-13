@@ -1,6 +1,6 @@
 local M = {}
 
-local dbg_path = require("dap-install.config.settings").options["installation_path"] .. "vscode-chrome-debug/"
+local dbg_path = require("dap-install.config.settings").options["installation_path"] .. "chrome/"
 
 M.dap_info = {
 	name_adapter = "chrome",
