@@ -4,7 +4,10 @@ local dbg_path = require("dap-install.config.settings").options["installation_pa
 
 M.dap_info = {
 	name_adapter = "chrome",
-	name_configuration = "chrome",
+	name_configuration = {
+		'javascriptreact',
+		'typescriptreact'
+	},
 }
 
 M.config = {
@@ -14,7 +17,6 @@ M.config = {
 		args = {dbg_path .. "/ovscode-chrome-debug/out/src/chromeDebug.js"}
 	},
 	configurations = {
-		javascriptreact = {
 			type = "chrome",
 			request = "attach",
 			program = "${file}",
@@ -23,17 +25,6 @@ M.config = {
 			protocol = "inspector",
 			port = 9222,
 			webRoot = "${workspaceFolder}"
-		},
-		typescriptreact = {
-			type = "chrome",
-			request = "attach",
-			program = "${file}",
-			cwd = vim.fn.getcwd(),
-			sourceMaps = true,
-			protocol = "inspector",
-			port = 9222,
-			webRoot = "${workspaceFolder}"
-		},
 	},
 }
 
