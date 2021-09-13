@@ -14,7 +14,7 @@ M.config = {
 	adapters = {
 		type = "executable",
 		command = "node",
-		args = {dbg_path .. "/ovscode-chrome-debug/out/src/chromeDebug.js"}
+		args = {dbg_path .. "/vscode-chrome-debug/out/src/chromeDebug.js"}
 	},
 	configurations = {
 		{
