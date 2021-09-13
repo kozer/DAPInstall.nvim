@@ -17,6 +17,7 @@ M.config = {
 		args = {dbg_path .. "/ovscode-chrome-debug/out/src/chromeDebug.js"}
 	},
 	configurations = {
+		{
 			type = "chrome",
 			request = "attach",
 			program = "${file}",
@@ -25,6 +26,7 @@ M.config = {
 			protocol = "inspector",
 			port = 9222,
 			webRoot = "${workspaceFolder}"
+		}
 	},
 }
 
