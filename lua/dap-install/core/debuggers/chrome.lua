@@ -20,7 +20,7 @@ M.config = {
 		{
 			type = "chrome",
 			request = "attach",
-			program = "${workspaceFolder}/${file}",
+			program = "${file}",
 			cwd = vim.fn.getcwd(),
 			sourceMaps = true,
 			protocol = "inspector",
